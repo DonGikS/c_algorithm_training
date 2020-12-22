@@ -5,15 +5,11 @@
 
 
 void main() {
-	int a=32;
-	int arr[a];
-	int i;
-	for(int i = 0; i < a; i++){
-		arr[i] = a - i;
-	}
-	max_arr2(arr, a);
-	
-	for(i = 0; i < a; i++) printf("%d ", arr[i]);
+	int x = 1, y = 2;
+	wrong_swap(x, y);
+	printf("%d %d\n", x, y);
+	swap(&x, &y);
+	printf("%d %d\n", x, y);
 	return;
 }
 

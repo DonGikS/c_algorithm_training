@@ -48,3 +48,20 @@ int max_arr2(int arr[], int arr_len){
 	if (arr_len == 1) return arr[0];
 	else return max(arr[arr_len-1], max_arr2(arr, arr_len -1));
 }
+
+//###################################################################################-0.2
+
+void wrong_swap(int a, int b){//포인터로 받지 않아서 동작하지 않는 swap함수 
+	int temp;
+	
+	temp = a;
+	a = b;
+	b = temp;
+}
+void swap(int *a, int *b){
+	int temp;
+	
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
