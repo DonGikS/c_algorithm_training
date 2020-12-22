@@ -10,3 +10,4 @@ int max_arr2(int arr[], int arr_len);
 
 void wrong_swap(int a, int b);
 void swap(int *a, int *b);
+void swap_arr(int arr[], int i, int j);
