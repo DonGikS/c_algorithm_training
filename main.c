@@ -5,12 +5,13 @@
 
 
 void main() {
-	int arr[10];
-	for(int i = 0; i<10; i++){
+	int arr[10000];
+	for(int i = 0; i<10000; i++){
 		arr[i] = i;
 	}
-	swap_arr(arr, 3, 9);
-	for(int i = 0; i<10; i++){
+	//right_rotate_advance(arr, 24, 8500, 15050);
+	right_rotate_compare(arr, 24, 8500, 15050);
+	for(int i = 0; i<10000; i++){
 		printf("%d ", arr[i]);
 	}
 	return;

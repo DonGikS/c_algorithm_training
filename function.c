@@ -73,3 +73,50 @@ void swap_arr(int arr[], int i, int j){
 	arr[i] = arr[j];
 	arr[j] = temp;
 }
+
+//###################################################################################-0.3
+void right_rotate(int arr[], int s, int t){
+	int i, last;
+	
+	last = arr[t];
+	for(i = t; i > s; i--){
+		arr[i] = arr[i-1];
+	}
+	arr[s] = last;
+}
+void left_rotate(int arr[], int s, int t){
+	int i, leftmost;
+	
+	leftmost = arr[s];
+	for(i = s; i < t; i++){
+		arr[i] = arr[i+1];
+	}
+	arr[t] = leftmost;
+}
+void right_rotate_advance(int arr[], int s, int t, int k){
+	int pure_move = k % (t - s + 1);
+	
+	int temp_arr[pure_move];
+	
+	for(int i = 0; i < pure_move; i++){
+		temp_arr[i] = arr[t - pure_move + 1 + i];
+	}
+	for(int i = t; s < i; i--){
+		arr[i] = arr[i - pure_move];
+	}
+	for(int i = 0; i < pure_move; i++){
+		arr[s + i] = temp_arr[i];
+	}
+}
+void right_rotate_compare(int arr[], int s, int t, int k){
+	int loop_val = 0;
+	while(loop_val < k){
+		int i, last;
+		last = arr[t];
+		for(i = t; s < i; i--){
+			arr[i] = arr[i-1];
+		}
+		arr[s] = last;
+		loop_val++;
+	}
+}

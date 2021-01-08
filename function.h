@@ -11,3 +11,8 @@ int max_arr2(int arr[], int arr_len);
 void wrong_swap(int a, int b);
 void swap(int *a, int *b);
 void swap_arr(int arr[], int i, int j);
+
+void right_rotate(int arr[], int s, int t);
+void left_rotate(int arr[], int s, int t);
+void right_rotate_advance(int arr[], int s, int t, int k);
+void right_rotate_compare(int arr[], int s, int t, int k);
