@@ -120,3 +120,62 @@ void right_rotate_compare(int arr[], int s, int t, int k){
 		loop_val++;
 	}
 }
+//###################################################################################-0.4
+#define QUEUE_CAPACITY 8
+
+static int queue[QUEUE_CAPACITY];
+static int head_queue = 0;
+static int tail_queue = -1;
+static int queue_size = 0;
+
+void enqueue(int n){
+	if (queue_size == QUEUE_CAPACITY){
+		printf("queue full\n");
+		return;
+	}
+	tail_queue = (tail_queue + 1) % QUEUE_CAPACITY;
+	queue_size++;
+	queue[tail_queue]=n;
+}
+
+int dequeue(){
+	int r;
+	if(queue_size == 0){
+		printf("queue empty!\n");
+		return 0;
+	}
+	
+	r = queue[head_queue];
+	head_queue = (head_queue + 1) % QUEUE_CAPACITY;
+	queue_size--;
+	return r;
+}
+#define STACK_CAPACITY 8
+
+static int stack[STACK_CAPACITY];
+static int top_stack=-1;
+
+void push_stack(int n){
+	if(n <= 0){
+		printf("please, input value is positive int\n");
+		return;
+	}
+	if(top_stack<0) top_stack = 0;
+	if (top_stack == STACK_CAPACITY){
+		printf("stack is fulled\n");
+		return;
+	}
+	stack[top_stack] = n;
+	top_stack++;
+}
+
+int pop_stack(){
+	int r;
+	if(top_stack <= 0){
+		printf("stack is empty\n");
+		return 0;
+	}
+	r = stack[--top_stack];
+	return r;
+}
+
