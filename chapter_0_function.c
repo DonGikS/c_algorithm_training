@@ -153,14 +153,9 @@ int dequeue(){
 #define STACK_CAPACITY 8
 
 static int stack[STACK_CAPACITY];
-static int top_stack=-1;
+static int top_stack=0;
 
 void push_stack(int n){
-	if(n <= 0){
-		printf("please, input value is positive int\n");
-		return;
-	}
-	if(top_stack<0) top_stack = 0;
 	if (top_stack == STACK_CAPACITY){
 		printf("stack is fulled\n");
 		return;
