@@ -174,3 +174,33 @@ int pop_stack(){
 	return r;
 }
 
+#define ADVENCE_QUEUE_CAPACITY 8
+static void* advenceQueue[ADVENCE_QUEUE_CAPACITY];
+static int advence_head_queue = 0;
+static int advence_tail_queue = -1;
+static int advence_queue_size = 0;
+
+
+void addQueue(void* value){
+	if(advence_queue_size == ADVENCE_QUEUE_CAPACITY){
+		printf("The Queue is fulled\n");
+		return;
+	}
+	advence_tail_queue = (advence_tail_queue + 1) % ADVENCE_QUEUE_CAPACITY;
+	advenceQueue[advence_tail_queue] = value;
+	advence_queue_size++;
+}
+void* deleteQueue(){
+	void* r;
+	if(advence_queue_size == 0){
+		printf("The Queus is emptied\n");
+		return NULL;
+	}
+	r = advenceQueue[advence_head_queue];
+	advence_head_queue = (advence_head_queue + 1) % ADVENCE_QUEUE_CAPACITY;
+	advence_queue_size--;
+	
+	return r;
+}
+
+

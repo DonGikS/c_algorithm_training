@@ -60,20 +60,20 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit2]
-FileName=function.c
+[Unit3]
+FileName=chapter_0_function.h
 CompileCpp=0
-Folder=Source
+Folder=Header
 Compile=1
 Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit3]
-FileName=function.h
+[Unit2]
+FileName=chapter_0_function.c
 CompileCpp=0
-Folder=Header
+Folder=Source
 Compile=1
 Link=1
 Priority=1000

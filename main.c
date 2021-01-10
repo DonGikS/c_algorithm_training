@@ -5,17 +5,21 @@
 
 
 int main() {
-	int number, r;
+	//int number, r;
+	void* number;
+	void* r;
 	do{
 		printf("input number: ");
-		scanf("%d", &number);
-		
+		//scanf("%d", &number);
+		scanf("%d", &number); 
 		if(number > 0){
 			//enqueue(number);
-			push_stack(number);
+			//push_stack(number);
+			addQueue(number);
 		}else if(number == 0){
 			//r = dequeue();
-			r = pop_stack();
+			//r = pop_stack();
+			r = deleteQueue();
 			printf("[%d]\n", r);
 		}
 	} while(number >= 0);

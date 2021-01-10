@@ -21,3 +21,6 @@ void enqueue(int n);
 int dequeue();
 void push_stack(int n);
 int pop_stack();
+
+void addQueue(void*);
+void* deleteQueue();
