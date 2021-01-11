@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 //int min(int x, int y);
 //int max(int x, int y);
 int min_advence(int x, int y, int z);
@@ -24,3 +24,6 @@ int pop_stack();
 
 void addQueue(void*);
 void* deleteQueue();
+
+void insert_node(int);
+int delete_node();
