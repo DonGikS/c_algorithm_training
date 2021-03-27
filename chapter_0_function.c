@@ -241,3 +241,12 @@ int delete_node(){
 	free(node);
 	return r;
 }
+//############################################# extra problem 0.5
+// 0.a problem
+void print_arr(int arr[], int lenght_arr){
+
+	for(int i = 0; i < lenght_arr; i++){
+		if(i != lenght_arr - 1) printf("%d ", arr[i]);
+		else printf("%d\n", arr[i]); 
+	}
+}

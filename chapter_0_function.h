@@ -27,3 +27,5 @@ void* deleteQueue();
 
 void insert_node(int);
 int delete_node();
+
+void print_arr(int arr[], int lenght_arr);
