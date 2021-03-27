@@ -12,6 +12,8 @@ int main() {
 		arr[i] = rand()%9;
 	}
 	print_arr(arr, sizeof(arr)/sizeof(int));
+	int *arr_re = all_is(arr, sizeof(arr)/sizeof(int), 1);
+	print_arr( arr_re, sizeof(arr)/sizeof(int));
 	
 	
 	return 0;

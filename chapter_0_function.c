@@ -250,3 +250,13 @@ void print_arr(int arr[], int lenght_arr){
 		else printf("%d\n", arr[i]); 
 	}
 }
+//0.b problem
+int* all_is(int arr[], int lenght_arr, int k){
+	printf("%d\n",lenght_arr);
+	int *temp_arr = (int *) malloc(lenght_arr * sizeof(int));//일반 포인터 변수로 하면 되지 않는다. 동적메모리할당을 해야 가능. 
+	for(int i = 0; i < lenght_arr; i++){
+		if(arr[i] == k) temp_arr[i] = 1;
+		else if(arr[i] != k) temp_arr[i] = 0;
+	}
+	return temp_arr;
+}
