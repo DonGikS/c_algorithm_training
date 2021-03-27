@@ -6,14 +6,7 @@
 
 
 int main() {
-	int arr[100];
-	srand(time(NULL));
-	for(int i=0; i<(sizeof(arr)/sizeof(int)); i++){
-		arr[i] = rand()%9;
-	}
-	print_arr(arr, sizeof(arr)/sizeof(int));
-	printf("%d\n",all_is(arr, sizeof(arr)/sizeof(int), 4));
-	
+	printf("%d\n",trans_binary(123));
 	
 	
 	return 0;

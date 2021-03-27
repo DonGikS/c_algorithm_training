@@ -258,3 +258,23 @@ int all_is(int arr[], int lenght_arr, int k){
 	}
 	return 1;
 }
+
+//0.c problem
+int trans_binary(int k){
+	int count=0;
+	int num_one=0;
+	int bi_arr[32]={0,};
+	while(1){
+		bi_arr[count] = k%2;
+		k = k/2;
+		count++;
+		if(k == 0) break;
+	};
+	for(int i = count; i > 0; i--){
+		if(bi_arr[i-1] == 1) num_one+=1;
+		if(i-1 != 0)printf("%d", bi_arr[i-1]);
+		else printf("%d\n", bi_arr[i-1]);
+	}
+	return num_one;
+	
+}
